@@ -1,0 +1,17 @@
+//BASICS
+//LINUX BASED
+Start postgres 
+sudo -i -u postgres
+
+Enter postgres consol
+psql
+
+Exit Console
+\q
+
+Exit Server
+exit
+
+
+
+
