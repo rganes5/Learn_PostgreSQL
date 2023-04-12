@@ -1,0 +1,24 @@
+Here we will create a test database with all default settings.
+CREATE DATABASE db_name;
+
+Connect to DB
+\c dbname
+
+Rename a database: 
+ALTER DATABASE db_name RENAME TO new_db_name;
+
+View all database:
+\l
+
+Using SELECT statement:
+SELECT db_name FROM pg_database;
+
+Create new user:
+CREATE ROLE new_user_name
+VALID UNTIL 'infinity';
+
+Change the owner:
+ALTER DATABASE db_name OWNER TO user_name;
+
+ 
+
