@@ -1,0 +1,21 @@
+CREATE TABLE:
+CREATE TABLE table_name(column_name DATATYPE);
+
+INSERT INTO TABLE:
+INSERT INTO table_name(column_name) VALUES(value);
+
+DISPLAY TABLE:
+SELECT *FROM table_name;
+
+DISPLAY TABLE WITH SPECIFIC:
+SELECT *FROM table_name WHERE Col_name=col_value;
+
+ADD COLUMNS TO EXISTING TABLE:
+ALTER TABLE table_name ADD COLUMN col_name DATATYPE, ADD COLUMN col_name DATATYPE;
+
+ADD VALUES TO ALTERED COLUMNS IN EXISTING TABLE:
+SET col_name = 'value', col_name = 'value'
+WHERE table_id = id_number;
+
+
+
