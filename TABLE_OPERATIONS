@@ -1,3 +1,9 @@
+To create a new user in PostgreSQL:
+CREATE USER username WITH PASSWORD 'password';
+
+Grant all privileges to the new user on a specific database:
+GRANT ALL PRIVILEGES ON DATABASE mydatabase TO newuser;
+
 CREATE TABLE:
 CREATE TABLE table_name(column_name DATATYPE);
 
@@ -16,6 +22,53 @@ ALTER TABLE table_name ADD COLUMN col_name DATATYPE, ADD COLUMN col_name DATATYP
 ADD VALUES TO ALTERED COLUMNS IN EXISTING TABLE:
 SET col_name = 'value', col_name = 'value'
 WHERE table_id = id_number;
+
+ORDER-BY:
+SELECT *FROM table_name ORDER BY col_name ASC/DESC;
+SELECT col_name FROM table_name ORDER BY col_name ASC/DESC;
+
+DISTINCT:
+SELECT DISTINCT col_name FROM table_name ORDER BY col_name;
+
+WHERE:
+SELECT *FROM table_name WHERE col_name='criteria';
+SELECT *FROM table_name WHERE col_name1='criteria' AND (col_name2='criteria' OR col_name2='criteria');
+
+LIMIT:
+SELECT *FROM table_name LIMIT 14;
+
+FETCH: 
+//same as limit
+SELECT *FROM table_name FETCH FIRST 10 ROW ONLY;
+
+OFFSET:
+SELECT *FROM table_name OFFSET 5 LIMIT 5;
+
+IN: 
+//takes in array of values and converts to query
+SELECT *FROM table_name WHERE col_name IN ('criteria1','criteria2','criteria3');
+
+BETWEEN:
+//USED DOB AS EXAMPLE
+SELECT *FROM table_name WHERE date_of_birth
+BETWEEN '2022-01-01' AND '2023-01-01';
+
+LIKE:
+SELECT *FROM table_name WHERE email LIKE '%.com';
+SELECT *FROM table_name WHERE email LIKE '%google.%';
+SELECT *FROM table_name WHERE email LIKE '_______@%';
+SELECT *FROM person WHERE country LIKE 'P%';
+
+GROUP-BY:
+SELECT col_name, COUNT(*) FROM table_name GROUP BY col_name;
+// This will count the number of people by grouping countries eg: SELECT country, COUNT(*) FROM person GROUP BY country;
+
+GROUP-BY HAVING:
+SELECT country, COUNT(*) FROM person GROUP BY country HAVING COUNT(*) >5 ORDER BY country;
+
+
+
+
 
 
 
