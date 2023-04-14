@@ -66,12 +66,12 @@ SELECT col_name, COUNT(*) FROM table_name GROUP BY col_name;
 GROUP-BY HAVING:
 SELECT country, COUNT(*) FROM person GROUP BY country HAVING COUNT(*) >5 ORDER BY country;
 
-HOW TO DELETE VALUE FROM A COLUMN IN POSTGRES:
-UPDATE table_name SET column_name = NULL WHERE condition;
-eg:UPDATE person SET car_id= NULL WHERE id=1;
+SELECT DISTINCT first_name 
+FROM person
+GROUP BY name;
 
-
-
+misc:
+SELECT make,price FROM CAR WHERE price = (SELECT MAX(price) FROM car);
 
 
 
