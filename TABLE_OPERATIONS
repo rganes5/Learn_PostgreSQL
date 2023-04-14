@@ -73,6 +73,11 @@ GROUP BY name;
 misc:
 SELECT make,price FROM CAR WHERE price = (SELECT MAX(price) FROM car);
 
+SELECT make,COUNT(*) FROM car
+GROUP BY make
+HAVING COUNT(*)>30;
+
+
 
 
 
