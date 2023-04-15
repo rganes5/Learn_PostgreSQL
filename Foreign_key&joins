@@ -1,0 +1,21 @@
+foreign key:
+car_id BIGINT REFERENCES car (id),
+UNIQUE CONTRAINTS(car_id)
+
+
+INNER JOIN:
+SELECT * FROM t_name1
+JOIN t_name2 ON t_name1.f_key = t_name2.p_key;
+
+
+
+
+
+
+
+
+
+
+
+
+
